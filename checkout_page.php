@@ -59,11 +59,11 @@ if (isset($_POST['order'])) {
          if ($new_stock < 5) {
             $mail = new PHPMailer(true);
             try {
-               $mail->isSMTP();
+              /* $mail->isSMTP();
                $mail->Host = 'smtp.gmail.com'; 
                $mail->SMTPAuth = true;
-               $mail->Username = 'sneakersahead0@gmail.com'; 
-               $mail->Password = 'gytn vhml ppgz nrsn';   
+               $mail->Username = 'youremail@gmail.com'; 
+               $mail->Password = 'password';   
                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                $mail->Port = 587;
 
@@ -73,7 +73,7 @@ if (isset($_POST['order'])) {
                $mail->isHTML(true);
                $mail->Subject = 'Restock Alert';
                $mail->Body = 'The product ' . $fetch_stock['name'] . ' (ID: ' . $pid . ') is low in stock. Only ' . $new_stock . ' items left.';
-
+*/
                $mail->send();
             } catch (Exception $e) {
                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

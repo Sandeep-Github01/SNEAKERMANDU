@@ -44,12 +44,12 @@ if(isset($_POST['submit'])){
       $mail = new PHPMailer(true);
       
       try {
-         
+         /*
          $mail->isSMTP();
          $mail->Host = 'smtp.gmail.com';  
          $mail->SMTPAuth = true;
-         $mail->Username = 'sneakersahead0@gmail.com'; 
-         $mail->Password = 'gytn vhml ppgz nrsn';   
+         $mail->Username = 'youremail@gmail.com'; 
+         $mail->Password = 'password';   
          $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
          $mail->Port = 587;
       
@@ -61,7 +61,7 @@ if(isset($_POST['submit'])){
          $mail->isHTML(true);
          $mail->Subject = 'Your OTP Code';
          $mail->Body = 'Your OTP code is: ' . $otp;
-      
+      */ //Commented for security reason Undo and place your email when done,
          $mail->send();
          echo 'OTP has been sent to your email!';
          header('location:otp_verification.php');
